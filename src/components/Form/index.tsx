@@ -1,13 +1,13 @@
 import React from "react";
 import Button from "../Button";
 
-import "./style.scss";
+import style from "./Form.module.scss";
 
 class Form extends React.Component {
     render() {
         return (
-            <form className="newTask">
-                <div className="inputGroup">
+            <form className={style.newTask}>
+                <div className={style.inputGroup}>
                     <label htmlFor="task">
                         Add a new task:
                     </label>
@@ -19,7 +19,7 @@ class Form extends React.Component {
                         required
                     />
                 </div>
-                <div className="inputGroup">
+                <div className={style.inputGroup}>
                     <label htmlFor="time">
                         Time:
                     </label>
