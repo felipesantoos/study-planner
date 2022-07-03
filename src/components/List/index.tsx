@@ -1,5 +1,5 @@
 import React from "react";
-import Index from "./Item";
+import Item from "./Item";
 import { ITask } from "../../types/task";
 
 import style from "./List.module.scss";
@@ -15,7 +15,7 @@ function List({ taskList, selectTask }: Props) {
             <h2>Today's studies</h2>
             <ul>
                 {taskList.map(task => (
-                    <Index key={task.id} {...task} selectTask={selectTask} />
+                    <Item key={task.id} {...task} selectTask={selectTask} />
                 ))}
             </ul>
         </aside>

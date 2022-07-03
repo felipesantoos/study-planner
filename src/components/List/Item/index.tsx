@@ -1,13 +1,13 @@
 import React from "react";
 import { ITask } from "../../../types/task";
 
-import style from "../List.module.scss";
+import style from "./Item.module.scss";
 
 interface Props extends ITask {
     selectTask: (task: ITask) => void
 }
 
-function Index({ name, time, selected, complete, id, selectTask }: Props) {
+function Item({ name, time, selected, complete, id, selectTask }: Props) {
     return (
         <li
             className={`${style.task} ${selected ? style.selectedTask : ""}`}
@@ -19,4 +19,4 @@ function Index({ name, time, selected, complete, id, selectTask }: Props) {
     )
 }
 
-export default Index
+export default Item
